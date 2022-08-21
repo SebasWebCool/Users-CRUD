@@ -1,0 +1,120 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(0deg, rgb(12, 20, 31) 0%, rgb(22, 66, 128) 100%);
+}
+.App{
+    text-align: center;
+}
+.btn_create{
+    border: none;
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+.users__cont{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.user_card{
+    width: 700px;
+    background-color: white;
+    padding: 20px 70px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user_info{
+    text-align: start;
+}
+.user_name{
+    text-transform: capitalize;
+}
+.user_email{
+    font-weight: lighter;
+}
+.user_birthday{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.user_btns button{
+    border: none;
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+.user_btns button i{
+    font-size: 22px;
+}
+
+/* Form */
+.form_cont{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+
+    position: absolute;
+}
+.form_users{
+    background-color: rgb(245, 242, 238);
+    border-radius: 5px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+.form_cont input{
+    padding: 5px;
+    border-radius: 5px;
+   width: 90%; 
+}
+.form_inf3 label i{
+    font-size: 30px;
+}
+.form_inf3 input{
+    padding: 5px;
+    border-radius: 5px;
+    width: 45%;
+}
+.form_inf label i{
+    font-size: 30px;
+}
+.form_btn{
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px ;
+    cursor: pointer;
+    background-color: rgb(23, 73, 129);
+    color: white;
+}
+.btn_x{
+    border: none;
+    background: none;
+    position:absolute;
+    top: 0;
+    right: 30px;
+    font-size: 50px;
+    cursor: pointer;
+}
+.none{
+    display: none;
+}
