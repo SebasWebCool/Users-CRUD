@@ -69,7 +69,7 @@ body{
     align-items: center;
     backdrop-filter: blur(10px);
 
-    position: absolute;
+    position: fixed;
 }
 .form_users{
     background-color: rgb(245, 242, 238);
@@ -117,4 +117,20 @@ body{
 }
 .none{
     display: none;
+}
+@media screen and (max-width:720px){
+    .user_card{
+        width: 90%;
+    }
+}
+@media screen and (max-width:450px){
+    .user_card{
+        padding: 20px;
+    }
+    .user_btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
