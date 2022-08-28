@@ -27,7 +27,10 @@ const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
 
 
     useEffect(() => {
-        reset(usersEditInfo)
+        if(usersEditInfo){
+            reset(usersEditInfo)
+            console.log(usersEditInfo)
+        }
     }, [usersEditInfo])
 
     const editUserInfo = (data) => {
@@ -45,6 +48,8 @@ const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
         // console.log(data);
         if (usersEditInfo) {
             editUserInfo(data)
+            reset(defaultValues)
+
         } else {
             createUser(data)
             reset(defaultValues)
