@@ -4,62 +4,73 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(0deg, rgb(12, 20, 31) 0%, rgb(22, 66, 128) 100%);
+    font-family: 'Cormorant Garamond', serif;
 }
 .App{
     text-align: center;
 }
 .btn_create{
     border: none;
-    background-color: rgb(231, 231, 231);
+    background-color: #7c7c7c;
+    color: white;
     border-radius: 5px;
     padding: 8px;
     cursor: pointer;
     margin: 5px;
 }
 .users__cont{
-    margin: 20px auto;
+    margin: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 .user_card{
-    width: 700px;
-    background-color: white;
-    padding: 20px 70px;
-    border-radius: 10px;
+    width: 320px;
+    border: solid 2px #dddcdc;
+    background-color: #f1f1f1;
+    padding: 10px ;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .user_info{
+    width: 100%;
     text-align: start;
 }
 .user_name{
+    margin: 0;
+    margin-bottom: 20px ;
     text-transform: capitalize;
 }
 .user_email{
+    margin: 0;
     font-weight: lighter;
+    margin-bottom: 20px ;
 }
 .user_birthday{
+    margin: 0;
+    margin-bottom: 20px;
     font-size: 16px;
     font-weight: bolder;
 }
-.user_btns button{
+.user_btn{
     border: none;
-    background-color: rgb(231, 231, 231);
+    background-color: #7c7c7c;
     border-radius: 5px;
     padding: 8px;
     cursor: pointer;
     margin: 5px;
 }
 .user_btns button i{
+    color: white;
     font-size: 22px;
 }
-
+.red{
+    background-color: rgb(248, 61, 61);
+}
 /* Form */
 .form_cont{
     width: 100%;
@@ -118,19 +129,26 @@ body{
 .none{
     display: none;
 }
-@media screen and (max-width:720px){
+@media screen and (max-width:725px){
     .user_card{
-        width: 90%;
+        width: 250px;
+    }
+    .users__cont{
+        justify-content: center;
     }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:585px){
     .user_card{
-        padding: 20px;
+        width: 80%;
     }
     .user_btns{
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .user_btn{
+        width: 80%;
     }
 }

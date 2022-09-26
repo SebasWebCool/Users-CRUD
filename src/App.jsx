@@ -27,9 +27,9 @@ function App() {
 
   return (
     <div className="App">
+      <UsersForm usersEditInfo={usersEditInfo} show={show} setShow={setShow} getAllUsers={getAllUsers}/>
       <h1>Users CRUD</h1>
       <button onClick={openForm} className='btn_create'>Create User</button>
-      <UsersForm usersEditInfo={usersEditInfo} show={show} setShow={setShow} getAllUsers={getAllUsers}/>
       
      <div className='users__cont'>
         {

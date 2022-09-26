@@ -19,13 +19,15 @@ const UsersList = ({user,getAllUsers, setUsersEditInfo, setShow}) => {
     <article className='user_card'>
         <div className='user_info'>
             <h3 className='user_name'>{user["first_name"]} {user["last_name"]} </h3>
+            <span>Email</span>
             <h4 className='user_email'>{user.email}</h4>
-            <h3 className='user_birthday'>🎉{user.birthday}</h3>
+            <span>Birthday</span>
+            <h3 className='user_birthday'>{user.birthday}</h3>
         </div>
 
         <div className="user_btns">
-            <button onClick={()=>deleteUser(user.id)}><i className='bx bx-trash'></i></button>
-            <button onClick={()=>{editUser();setShow(true)}}><i className='bx bx-edit-alt' ></i></button>
+            <button className='user_btn red' onClick={()=>deleteUser(user.id)}><i className='bx bx-trash'></i></button>
+            <button className='user_btn' onClick={()=>{editUser();setShow(true)}}><i className='bx bx-edit-alt' ></i></button>
         </div>
     </article>
   )
