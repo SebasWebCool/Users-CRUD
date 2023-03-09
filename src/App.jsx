@@ -11,10 +11,12 @@ function App() {
   const [usersEditInfo, setUsersEditInfo] = useState()
   const [show, setShow] = useState(false)
 
-  const url=`https://users-crud1.herokuapp.com/users/`
+  const url=`https://users-crud-api-production.up.railway.app/api/v1/users`
   const getAllUsers = () => {
     axios.get(url)
-      .then(res => {setUsersInfo(res.data)})
+      .then(res => {
+        console.log(res)
+        setUsersInfo(res.data)})
       .catch(err=> console.log(err))
   }
   useEffect(()=>{

@@ -4,7 +4,7 @@ import axios from 'axios'
 const UsersList = ({user,getAllUsers, setUsersEditInfo, setShow}) => {
 
     const deleteUser = (id) =>{
-        const url =`https://users-crud1.herokuapp.com/users/${id}/`
+        const url =`https://users-crud-api-production.up.railway.app/api/v1/users/${id}`
         axios.delete(url,id)
             .then(res => {
                 console.log(res.data)
@@ -18,9 +18,11 @@ const UsersList = ({user,getAllUsers, setUsersEditInfo, setShow}) => {
   return (
     <article className='user_card'>
         <div className='user_info'>
-            <h3 className='user_name'>{user["first_name"]} {user["last_name"]} </h3>
+            <h3 className='user_name'>{user["firstName"]} {user["lastName"]} </h3>
             <span>Email</span>
             <h4 className='user_email'>{user.email}</h4>
+            <span>Phone</span>
+            <h4 className='user_email'>{user.phone}</h4>
             <span>Birthday</span>
             <h3 className='user_birthday'>{user.birthday}</h3>
         </div>

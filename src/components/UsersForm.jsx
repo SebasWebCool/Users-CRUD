@@ -6,15 +6,16 @@ import axios from 'axios'
 const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
 
     const defaultValues = {
-        email: ``,
-        password: ``,
-        first_name: ``,
-        last_name: ``,
-        birthday: ``
-    }
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        phone: "",
+        birthday: "",
+      }
 
     const createUser = (data) => {
-        const url = `https://users-crud1.herokuapp.com/users/`
+        const url = `https://users-crud-api-production.up.railway.app/api/v1/auth/register`
         axios.post(url, data)
             .then(
                 res => {
@@ -34,7 +35,7 @@ const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
     }, [usersEditInfo])
 
     const editUserInfo = (data) => {
-        const url = `https://users-crud1.herokuapp.com/users/${usersEditInfo.id}/`
+        const url = `users-crud-api-production.up.railway.app/api/v1/users/${usersEditInfo.id}`
         axios.patch(url, data)
             .then(res => {
                 console.log(res.data)
@@ -70,7 +71,6 @@ const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
                 <div className='form_inf'>
                     <label htmlFor="email"><i className='bx bx-envelope' ></i></label>
                     <input {...register("email")} type="text" id='email' placeholder='email' />
-
                 </div>
 
                 <div className='form_inf'>
@@ -81,16 +81,20 @@ const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
 
                 <div className='form_inf3'>
                     <label htmlFor="first_name"><i className='bx bxs-user' ></i></label>
-                    <input {...register("first_name")} type="text" id='first_name' placeholder='first name' />
+                    <input {...register("firstName")} type="text" id='first_name' placeholder='first name' />
 
                     <label htmlFor="last_name"></label>
-                    <input {...register("last_name")} type="text" id='last_name' placeholder='last name' />
+                    <input {...register("lastName")} type="text" id='last_name' placeholder='last name' />
                 </div>
 
                 <div className='form_inf'>
                     <label htmlFor="birthday"><i className='bx bx-cake'></i></label>
                     <input {...register("birthday")} type="date" id='birthday' />
+                </div>
 
+                <div className='form_inf'>
+                    <label htmlFor="phone"><i className='bx bxs-phone'></i></label>
+                    <input {...register("phone")} type="text" id='phone' placeholder='phone'/>
                 </div>
                 <button className='form_btn'>Create</button>
                 <button onClick={closeForm} className='btn_x'><i className='bx bx-x-circle'></i></button>
