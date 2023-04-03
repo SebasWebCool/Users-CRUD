@@ -35,7 +35,7 @@ const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
     }, [usersEditInfo])
 
     const editUserInfo = (data) => {
-        const url = `users-crud-api-production.up.railway.app/api/v1/users/${usersEditInfo.id}`
+        const url = `https://users-crud-api-production.up.railway.app/api/v1/users/${usersEditInfo.id}`
         axios.patch(url, data)
             .then(res => {
                 console.log(res.data)
