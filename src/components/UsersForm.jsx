@@ -15,7 +15,7 @@ const UsersForm = ({ getAllUsers, usersEditInfo, setShow, show }) => {
       }
 
     const createUser = (data) => {
-        const url = `https://users-crud-api-production.up.railway.app/api/v1/auth/register`
+        const url = `https://sebas-users-crud.onrender.com/api/v1/auth/register`
         axios.post(url, data)
             .then(
                 res => {

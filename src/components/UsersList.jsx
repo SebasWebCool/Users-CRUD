@@ -4,7 +4,7 @@ import axios from 'axios'
 const UsersList = ({user,getAllUsers, setUsersEditInfo, setShow}) => {
 
     const deleteUser = (id) =>{
-        const url =`https://users-crud-api-production.up.railway.app/api/v1/users/${id}`
+        const url =`https://sebas-users-crud.onrender.com/api/v1/users/${id}`
         axios.delete(url,id)
             .then(res => {
                 console.log(res.data)

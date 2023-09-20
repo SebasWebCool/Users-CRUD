@@ -11,7 +11,7 @@ function App() {
   const [usersEditInfo, setUsersEditInfo] = useState()
   const [show, setShow] = useState(false)
 
-  const url=`https://sebas-users-crud.onrender.com`
+  const url=`https://sebas-users-crud.onrender.com/api/v1/users`
   const getAllUsers = () => {
     axios.get(url)
       .then(res => {
